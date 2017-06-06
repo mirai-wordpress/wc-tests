@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>mirai-be demo</title>
+
+    <script type="text/javascript" src="../../platform/platform.js"></script>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../mirai-be.html">
+    <link rel="import" href="../mirai-rs.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered" style="max-width: 500px">
+      <h3>Basic mirai-be demo</h3>
+      <mirai-be idtokenprovider="10030559" language="es"></mirai-be>
+      <mirai-rs idtokenprovider="10030559" language="es"/></mirai-rs>
+    </div>
+    <script type="text/javascript">
+      document.querySelector("mirai-be").setAttribute("idtokenprovider", 100088885);
+      document.querySelector("mirai-rs").setAttribute("idtokenprovider", 100088885);
+    </script>
+  </body>
+</html>

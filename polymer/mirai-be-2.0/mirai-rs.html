@@ -1,0 +1,60 @@
+<link rel="import" href="../polymer/polymer.html">
+<script type="text/javascript" src="../moment/min/moment.min.js"></script>
+<script type="text/javascript" src="../moment/min/moment-with-locales.min.js"></script>
+<!--
+`mirai-rs`
+Mirai Room Selection
+
+@demo demo/index.html
+-->
+
+<dom-module id="mirai-rs">
+  <template>
+    <style>
+      :host {
+        display: block;
+      },
+
+      div.datas span {
+        display: block;
+      }
+    </style>
+    <div>
+      <h4>Doing search availability for hotel: {{idtokenprovider}}</h4>
+      <div class="datas">
+        <span>Language : {{language}},</span>
+        <span>Checkin : {{formatDate()}},</span>
+        <span>Nights : {{nights}}</span>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mirai-rs',
+
+      properties: {
+        idtokenprovider: {
+          type: Number,
+          value: '-1'
+        },
+        language: {
+          type: String,
+          value: 'en'
+        },
+        startDate: {
+          type: Date,
+          value: moment().toDate()
+        },
+        nights: {
+          type: Number,
+          value: 1
+        },
+      },
+
+      formatDate: function() {
+        return moment(this.startDate).format("DD/MM/YYYY");
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,85 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-input-date-picker/paper-input-date-picker.html">
+<script type="text/javascript" src="../moment/min/moment.min.js"></script>
+<script type="text/javascript" src="../moment/min/moment-with-locales.min.js"></script>
+<!--
+`mirai-be`
+Mirai Booking Entrance
+
+@demo demo/index.html
+-->
+
+<dom-module id="mirai-be">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .stayRange, .nights {
+        box-sizing: border-box;
+        padding: 7px;
+        margin-bottom: 5px;
+      }
+
+      .nights {
+        width: 42px;
+      }
+    </style>
+    <form>
+      <input type="hidden" name="idtokenprovider" value="[[idtokenprovider]]">
+      <input type="hidden" name="lang" value="[[language]]">
+      <paper-input-date-picker label="Checkin ..." min-date="{{minDate}}" style="width: 250px;" locale="[[language]]" value="{{selectedDate}}"></paper-input-date-picker>
+      <paper-input label="Nights" value="{{nights}}" style="display: inline-block; width: 120px"></paper-input>
+      <paper-button raised class="indigo" on-click="handleSubmit">Search</paper-button>
+    </form>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mirai-be',
+
+      properties: {
+        idtokenprovider: {
+          type: Number,
+          value: '-1'
+        },
+        language: {
+          type: String,
+          value: 'en'
+        },
+        startDate: {
+          type: Date,
+          value: moment().toDate()
+        },
+        endDate: {
+          type: Date,
+          value: moment().toDate()
+        },
+        nights: {
+          type: Number,
+          value: 1
+        },
+        selectedDate: {
+          type: Date,
+          value: moment().toDate()
+        },
+        minDate: {
+          type: Date,
+          value: moment().toDate()
+        },
+        maxDate: {
+          type: Date,
+          value: moment().add(12, 'months').toDate()
+        }
+      },
+
+      handleSubmit: function(event) {
+        document.location.href = "http://reservation.mirai.com/XMAS/reservation/forwarder.htm?idtokenprovider=" + this.idtokenprovider + "&lang=" + this.language + "&checkin=" + moment(this.selectedDate).format("DD/MM/YYYY") + "&nights=" + this.nights;
+      }
+
+
+    });
+  </script>
+</dom-module>
