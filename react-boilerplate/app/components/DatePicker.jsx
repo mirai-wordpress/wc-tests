@@ -5,12 +5,18 @@ import '../css/style.css';
 // @todo: We need to make this require based on a variable.
 // @todo: Translate startDatePlaceholderText / endDatePlaceholderText
 var ru = require('moment/locale/ru');
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController, DateRangePickerPhrases, START_DATE, END_DATE, HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from 'react-dates';
+import { DateRangePicker, DateRangePickerPhrases, isInclusivelyAfterDay, START_DATE, END_DATE, HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from 'react-dates';
+import omit from 'lodash/omit';
 import reactDatesStyles from '../../node_modules/react-dates/lib/css/_datepicker.css';
 import PropTypes from 'prop-types';
 import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 // import {} from 'react-bootstrap';
+
+/*function isInclusivelyAfterDay(a, b) {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isBeforeDay(a, b);
+}*/
 
 const propTypes = {
   // example props for the demo
@@ -74,7 +80,7 @@ const defaultProps = {
   phrases: DateRangePickerPhrases,
 };
 
-export default class DatePicker extends React.Component {
+class DatePicker extends React.Component {
         constructor(props){
             super(props);
 
@@ -107,10 +113,21 @@ export default class DatePicker extends React.Component {
 
 			const { focusedInput, startDate, endDate } = this.state;
 
+			// autoFocus, autoFocusEndDate, initialStartDate and initialEndDate are helper props for the
+		    // example wrapper but are not props on the SingleDatePicker itself and
+		    // thus, have to be omitted.
+		    const props = omit(this.props, [
+		      'autoFocus',
+		      'autoFocusEndDate',
+		      'initialStartDate',
+		      'initialEndDate',
+		    ]);
+
             return(
                 <div className={bootstrapStyles.container}>
 					<h1>Holaaaaaaaaaaaa</h1>
 					<DateRangePicker
+				      {...props}
 			          onDatesChange={this.onDatesChange}
 			          onFocusChange={this.onFocusChange}
 			          focusedInput={focusedInput}
@@ -122,3 +139,8 @@ export default class DatePicker extends React.Component {
             )
         }
 }
+
+DatePicker.propTypes = propTypes;
+DatePicker.defaultProps = defaultProps;
+
+export default DatePicker;
