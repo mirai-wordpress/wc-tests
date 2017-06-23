@@ -14,12 +14,16 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-      { 
-        test: path.resolve(__dirname + '/node_modules/bootstrap/dist/css/bootstrap.css'), 
+      {
+        test: path.resolve(__dirname + '/node_modules/bootstrap/dist/css/bootstrap.css'),
         loader: 'style-loader!css-loader?module&localIdentName=[name]--[local]--[hash:base64:5]'
       },
+	  {
+        test: path.resolve(__dirname + '/node_modules/react-dates/lib/css/_datepicker.css'),
+        loader: 'style-loader!css-loader'
+	  },
       {
-        test: path.resolve(__dirname + '/app/css/style.css'), 
+        test: path.resolve(__dirname + '/app/css/style.css'),
         loader: 'style-loader!css-loader'
       },
       {
