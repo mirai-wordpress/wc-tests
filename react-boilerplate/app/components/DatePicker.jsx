@@ -1,6 +1,10 @@
 import React from 'react';
 import bootstrapStyles from '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../css/style.css';
+// I18n calendar
+// @todo: We need to make this require based on a variable.
+// @todo: Translate startDatePlaceholderText / endDatePlaceholderText
+var ru = require('moment/locale/ru');
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController, DateRangePickerPhrases, START_DATE, END_DATE, HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from 'react-dates';
 import reactDatesStyles from '../../node_modules/react-dates/lib/css/_datepicker.css';
 import PropTypes from 'prop-types';
