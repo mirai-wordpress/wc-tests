@@ -1,4 +1,5 @@
 import React from 'react';
+import bootstrapStyles from '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 export default class MainComponent extends React.Component {
     constructor(){
@@ -9,13 +10,13 @@ export default class MainComponent extends React.Component {
             
             <div className={bootstrapStyles.container}>
                 
-                <div class="mi-be">
+                <div className="mi-be">
 
-                    <div class="container">
+                    <div className="container">
 
-                        <div class="row">
+                        <div className="row">
 
-                            <form class="col-md-12 col-sm-12">
+                            <form className="col-md-12 col-sm-12">
 
                                 <h1>Booking Entrance</h1>
 
