@@ -1,17 +1,14 @@
 import React from 'react';
-import moment from 'moment';
-import { isInclusivelyAfterDay } from 'react-dates';
 import {render} from 'react-dom';
-import MainComponent from './components/MainComponent.jsx';
-import DatePicker from './components/DatePicker.jsx';
+import BookingEntrance from './components/BookingEntrance.jsx';
+//import RoomSelection from './components/RoomSelection.jsx';
+//import bootstrapStyles from '../node_modules/bootstrap/dist/css/bootstrap.css';
+//import './css/style.css';
 
 render(
     <div>
-		<MainComponent/>
-		<DatePicker isOutsideRange={day =>
-        !isInclusivelyAfterDay(day, moment()) ||
-        isInclusivelyAfterDay(day, moment().add(2, 'weeks'))
-      }/>
+		<BookingEntrance/>
+// 		<RoomSelection/>
     </div>,
     document.getElementById('app')
 );
