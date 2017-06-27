@@ -1,4 +1,853 @@
-/* Place your styles here */
-.mi-be {
-	background-color: red;
+/* -------------------- iconos -------------------- */
+@font-face {
+  font-family: 'mi-icofont';
+  src:  url('../fonts/mi-icofont.eot?9mycsj');
+  src:  url('../fonts/mi-icofont.eot?9mycsj#iefix') format('embedded-opentype'),
+    url('../fonts/mi-icofont.ttf?9mycsj') format('truetype'),
+    url('../fonts/mi-icofont.woff?9mycsj') format('woff'),
+    url('../fonts/mi-icofont.svg?9mycsj#mi-icofont') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
+
+[class^="mi-ico-"]:before, [class*=" mi-ico-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mi-icofont' !important;
+  speak: none;
+  font-variant: normal;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+}
+span[class^="mi-ico-"], span[class*=" mi-ico-"] {
+	display: inline-block;
+	line-height: 1;
+}
+
+.mi-ico-bed-single:before {
+  content: "\e91a";
+}
+.mi-ico-bed-double:before {
+  content: "\e91b";
+}
+.mi-ico-calendar:before {
+  content: "\e916";
+}
+.mi-ico-baby:before {
+  content: "\e917";
+}
+.mi-ico-chidren:before {
+  content: "\e918";
+}
+.mi-ico-people:before {
+  content: "\e919";
+}
+.mi-ico-alarm-clock:before {
+  content: "\e900";
+}
+.mi-ico-arrow-down-dark:before {
+  content: "\e901";
+}
+.mi-ico-arrow-down-light:before {
+  content: "\e902";
+}
+.mi-ico-arrow-down:before {
+  content: "\e903";
+}
+.mi-ico-arrow-left-dark:before {
+  content: "\e904";
+}
+.mi-ico-arrow-left-light:before {
+  content: "\e905";
+}
+.mi-ico-arrow-left:before {
+  content: "\e906";
+}
+.mi-ico-arrow-right-dark:before {
+  content: "\e907";
+}
+.mi-ico-arrow-right-light:before {
+  content: "\e908";
+}
+.mi-ico-arrow-right:before {
+  content: "\e909";
+}
+.mi-ico-arrow-up-dark:before {
+  content: "\e90a";
+}
+.mi-ico-arrow-up-light:before {
+  content: "\e90b";
+}
+.mi-ico-arrow-up:before {
+  content: "\e90c";
+}
+.mi-ico-bell:before {
+  content: "\e90d";
+}
+.mi-ico-check-dark:before {
+  content: "\e90e";
+}
+.mi-ico-delete:before {
+  content: "\e90f";
+}
+.mi-ico-info:before {
+  content: "\e910";
+}
+.mi-ico-pic:before {
+  content: "\e911";
+}
+.mi-ico-plus:before {
+  content: "\e912";
+}
+.mi-ico-size:before {
+  content: "\e913";
+}
+.mi-ico-star:before {
+  content: "\e914";
+}
+.mi-ico-world:before {
+  content: "\e915";
+}
+
+
+/* -------------------- genericas -------------------- */
+body .mi-be,
+body .mi-rs {
+	font-size: 14px;
+}
+.mi-be h2,
+.mi-rs h2 ,
+.mi-be h3,
+.mi-rs h3 {
+	margin: 0;
+}
+.mi-be ul,
+.mi-rs ul {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+.mi-be p,
+.mi-rs p {
+	margin: 0;
+}
+.mi-be button,
+.mi-rs button {
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+	padding: 0;
+}
+.mi-rs .nav-pills {
+	border-bottom: 1px solid #e0e0e0;
+}
+.mi-rs .nav-pills > li > a {
+	border-radius: 0px;
+	position: relative;
+	bottom: -1px;
+	padding: 10px 5px;
+	margin-right: 10px;
+	color: #838c94;
+}
+.mi-rs .nav-pills > li > a:hover,
+.mi-rs .nav-pills > li.active > a:hover,
+.mi-rs .nav-pills > li.active > a:focus  {
+	background-color: transparent;
+	color: #EE820F;
+}
+.mi-rs .nav-pills > li.active > a {
+	background-color: transparent;
+	color: #EE820F;
+	border-bottom: 1px solid #EE820F;
+}
+
+
+
+
+/* -------------------- booking entrance -------------------- */
+.mi-be  {
+
+}
+
+
+/* -------------------- booking step 1 -------------------- */
+.mi-rs{
+	color: #3D3D3D;
+}
+
+	.mi-rs-currency-lang {
+		text-align: right
+	}
+
+	.mi-rs-results {
+
+	}
+		.mi-rs-messages {
+			background-color: #fff8e9;
+			border: 1px solid #f3e5c8;
+			border-radius: 3px;
+			padding: 0 20px;
+			margin-bottom: 15px;
+			position: relative;
+		}
+
+		.mi-rs-messages p {
+			line-height: 50px;
+		}
+
+		.mi-rs-messages ul {
+			margin-bottom: 20px;
+			font-size: 0.9em;
+			line-height: 20px;
+			margin-top: -10px;
+		}
+
+		.mi-rs-messages ul li .mi-ico-check-dark {
+			font-size: 8px;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+
+
+
+		.mi-rs-messages button {
+			position: absolute;
+			top: 0;
+			right: 20px;
+			line-height: 46px;
+			padding: 0px 0 0 25px;
+			margin: 2px 0;
+			border-left: 1px solid #f3e5c8;
+			color: #A26728;
+		}
+
+			.mi-rs-messages button .mi-ico-arrow-right-dark {
+				margin-left: 7px;
+				font-size: 12px;
+			}
+
+		.mi-rs-rooms-listing {
+			
+		}
+
+			.mi-rs-room {
+				border: 1px solid #DEDEDE;
+				border-radius: 3px;
+			}
+
+				.mi-rs-room-header {
+					padding: 15px;
+				}
+
+					.mi-rs-gallery-mini {
+						border: 1px solid #DEDEDE;
+						width: 200px;
+						height:150px;
+						display: block;
+						display: inline-block;
+					}
+
+					.mi-rs-room-detail {
+						display: inline-block;
+						vertical-align: top;
+						padding-left: 20px;
+					}
+
+						.mi-rs-room-alert {
+							color: #E04646;
+							margin-top: 10px;
+						}
+
+						.mi-rs-room-detail h2{font-size: 1.6em;margin-bottom: 15px;}
+
+						.mi-rs-room-occupation-btn {
+							border: 1px solid #8D9194 !important;
+							background-color: #fff !important;
+							width: auto;
+							border-radius: 2px;
+							text-align: left;
+							line-height: 40px;
+							padding: 0 10px !important;
+							margin-right: 15px;
+						}
+
+						.mi-rs-room-detail-btn {
+							color: #EE820F;
+							border: 1px solid #EE820F !important;
+							background-color: #fff !important;
+							width: auto;
+							border-radius: 2px;
+							text-align: left;
+							line-height: 40px;
+							padding: 0 10px !important;
+						}
+
+							.mi-rs-room-detail-btn .mi-ico-plus {
+								font-size: 19px;
+								vertical-align: sub;
+								margin-right: 7px;
+							} 
+
+				.mi-rs-rates-listing {
+
+				}
+				
+					.mi-rs-rates-listing > li:nth-child(odd) {
+						background-color: #F7F8FA;
+					} 
+
+					.mi-rs-rate {
+						border-top: 1px solid #DEDEDE;
+						padding: 20px;
+					}
+
+						.mi-rs-rate-details {
+
+						}
+					
+							.mi-rs-rate-confidential {
+								display: inline-block;
+								padding: 5px 15px;
+								margin-bottom: 10px;
+								color: #fff;
+								background-color: #59A9CC;
+								text-transform: uppercase;
+								border-radius: 20px;
+								line-height: 17px;
+								font-size: .8em;
+								height: 25px;
+							}
+
+							.mi-rs-rate-title {font-size: 1.2em;}
+
+							.mi-rs-rate-included {font-size: 0.9em;margin-top: 5px !important;}
+
+								.mi-rs-rate-included li {
+									margin-top: 3px;
+								}
+
+									.mi-rs-rate-included li .mi-ico-check-dark {
+										font-size: 10px;
+										margin-right: 5px;
+										vertical-align: middle;
+									}
+
+							.mi-rs-rate-see-more {
+								color: #EE820F;
+								margin: 5px 0 10px 0;
+							}
+
+								.mi-rs-rate-see-more .mi-ico-plus {
+									font-size: 12px;
+									margin-right: 2px;
+								}
+
+							.mi-rs-rate-info {margin-top: 5px;}
+
+								.mi-rs-rate-info .mi-ico-info {
+									color: #BCC3CB;
+									margin-right: 3px;
+								}
+
+							.mi-rs-rate-restriction {
+								color: #E04646;
+								margin-top: 5px;
+							}
+
+								.mi-rs-rate-restriction span[class^="mi-ico-"] {
+									margin-right: 3px;
+								}
+
+						.mi-rs-rate-boards {
+
+						}
+
+						.mi-rs-rate-prices {
+							display: inline-block;
+							text-align: center;
+							width: 60%;
+						}
+
+							.mi-rs-rate-prices span {
+								display: block;
+								text-align: center;
+							}
+
+							.mi-rs-rate-initial-price {
+								color: #B8C2B9;
+								text-decoration: line-through;
+							}
+
+							.mi-rs-rate-night-price {
+								color: #72B17C;
+								font-size: 1.7em;
+								font-weight: 700;
+							}
+
+							.mi-rs-rate-total-price {
+								color: #8D9194;
+								font-size: 0.9em;
+							}
+
+						.mi-rs-rate-qty {
+							display: inline-block;
+							text-align: center;
+							width: 38%;
+						}
+
+							.mi-rs-rate-qty label {
+								color: #8D9194;
+								font-size: 0.9em;
+							}
+
+					.mi-rs-rate-suggestion {
+						border-top: 1px solid #DEDEDE;
+						padding: 20px;
+						font-size: 1.2em;
+					}
+
+						.mi-rs-rate-suggestion div {
+							display: inline-block;
+						}
+
+							.mi-rs-rate-suggestion div .mi-ico-star {
+								margin-right: 5px;
+								font-size: 21px;
+								vertical-align: text-bottom;
+								color: #BCC3CB;
+							}
+
+						.mi-rs-suggestion-btn {
+							color: #EE820F;
+							display: inline-block;
+						}
+
+							.mi-rs-suggestion-btn .mi-ico-arrow-right {
+								margin-left: 8px;
+								vertical-align: text-bottom;
+								margin-bottom: 1px;								
+							}
+
+	.mi-rs-selection {
+		padding: 0; /* Matamos el padding para eliminar el que ponen los col de bootstrap */
+	}
+
+		.mi-rs-selection-resume {
+			border: 1px solid #DEDEDE;
+			border-bottom: none;
+			padding: 15px 15px 20px;
+			background-color: #F7F8FA;
+			border-radius: 3px 3px 0 0;
+		}
+
+			.mi-rs-selection-title {font-size: 1.6em;}
+
+			.mi-rs-selection-total {
+				color: #72B17C;
+				font-size: 1.7em;
+				font-weight: 700;
+			}
+
+			.mi-rs-selection-btn {
+				color: #fff;
+				background-color: #EE820F !important;
+				width: 100%;
+				border-radius: 3px;
+				text-align: left;
+				line-height: 40px;
+				font-size: 1.2em;
+				padding: 0 10px !important;
+				margin-top: 25px;
+				33: 500
+				font-size:;
+			}
+
+				.mi-rs-selection-btn .mi-ico-arrow-right-dark {
+					float: right;
+					margin-top: 13px;
+					font-size: 14px;
+				}
+
+		.mi-rs-selection-details {
+			border: 1px solid #DEDEDE;
+			border-top: none;
+			border-radius: 0 0 3px 3px;
+		}
+
+			.mi-rs-selection-details > ul {
+				padding: 20px 15px 15px;
+			}
+
+				.mi-rs-selection-details > ul > li {
+					padding-bottom: 20px;
+					border-bottom: 1px solid #DEDEDE;
+					margin-bottom: 20px;
+				}
+
+				.mi-rs-selection-details > ul > li:last-child {
+					padding-bottom: 0;
+					border-bottom: 0;
+					margin-bottom: 0;
+				}
+
+					.mi-rs-selection-room-desc {font-size: 0.9em;color: #8D9194;}
+
+					.mi-rs-selection-room-title {font-weight: 700;font-size: 1.2em;}
+
+					.mi-rs-selection-room-details {font-size: 0.9em;padding-left: 16px !important;margin: 5px 0 10px !important;}
+
+					.mi-rs-selection-room-text {font-size: 0.9em;margin: 5px 0 10px !important;}
+
+					.mi-rs-selection-room-details li {
+						list-style: disc;
+					}
+
+					.mi-rs-selection-room-price {
+						color: #72B17C;
+						display: inline-block;
+						border-right: 1px solid #DEDEDE;
+						font-weight: 700;
+						padding-right: 10px;
+						text-transform: uppercase;
+					}
+
+					.mi-rs-selection-room-btn {
+						color: #E04646;
+						font-size: 0.9em;
+						margin-left: 6px;
+					}
+
+						.mi-rs-selection-room-btn .mi-ico-delete {
+							margin-right: 3px;
+							vertical-align: middle;
+							font-size: 13px;
+							margin-bottom: 2px;
+						}
+
+		.mi-rs-selection-taxes {
+			font-style: italic;
+			color: #8D9194;
+			margin: 15px !important;
+			font-size: 0.85em;
+		}
+
+
+	/* ventanas modales */
+	.mi-rs-modal-rate-details {
+		width: 790px;
+		margin:0 auto;
+	}
+
+		.mi-rs-modal-rate-details table {
+			width: 100%;
+		}
+
+			.mi-rs-modal-rate-details table thead th {
+				text-align: right;
+				text-align: right;
+				font-size: .9em;
+				font-weight: normal;
+				color: #8D9194;
+			}
+
+				.mi-rs-modal-rate-details table thead th span {
+					background-color: #E6A225;
+					border-radius: 500px;
+					width: 6px;
+					height: 6px;
+					margin: 1px 3px;
+					display: inline-block;
+				}
+
+			.mi-rs-modal-rate-details table tbody tr:nth-child(odd) td {
+				background-color: #F7F8FA;
+			}
+
+			.mi-rs-modal-rate-details table tbody tr.mi-rs-rate-details-special-included td {
+				color: #E6A225;
+			}
+
+			.mi-rs-modal-rate-details table tbody td.mi-rs-rate-details-included {
+				width: 20%;
+				text-align: left;
+			}
+
+			.mi-rs-modal-rate-details table tbody td.mi-rs-rate-details-checkin {
+				width: 30%;
+				text-align: left;
+			}
+
+				.mi-rs-modal-rate-details table tbody td.mi-rs-rate-details-checkin .mi-ico-calendar {
+					margin-right: 5px;
+					font-size: 17px;
+    					vertical-align: text-bottom;
+    					color: #BCC3CB;
+				}
+
+			.mi-rs-modal-rate-details table tbody td.mi-rs-rate-details-board {
+				width: 35%;
+				text-align: left;				
+			}
+
+			.mi-rs-modal-rate-details table tbody td.mi-rs-rate-details-price {
+				width: 15%;	
+				text-align: right;
+			}
+
+			.mi-rs-modal-rate-details table tbody  td {
+				padding: 10px 15px;
+			}
+
+			.mi-rs-modal-rate-details table tfoot {
+				border-top: 2px solid #DEDEDE;
+			}
+
+				.mi-rs-modal-rate-details table tfoot td {
+					text-align: right;	
+				}
+
+				.mi-rs-modal-rate-details table tfoot tr.mi-rs-rate-details-total-price td {
+					padding: 10px 15px;
+					vertical-align: top;
+					font-size: 1.6em;
+				}
+				.mi-rs-modal-rate-details table tfoot tr.mi-rs-rate-details-total-price td div:first-child {
+					display: inline-block;
+					margin-left: 20px;
+					color: #72B17C;
+					font-size: 1.3em;
+				}
+				.mi-rs-modal-rate-details table tfoot tr.mi-rs-rate-details-total-price td div:last-child {
+					font-size: initial;
+				}
+				.mi-rs-modal-rate-details table tfoot .mi-rs-rate-details-taxex {
+					font-style: italic;
+					color: #8D9194;
+					margin: 15px !important;
+					font-size: 0.85em;
+				}
+
+		.mi-rs-modal-rate-details-legend {
+			border: 1px solid #DEDEDE;
+			border-radius: 3px;
+			background-color: #F7F8FA;
+			padding: 40px !important;
+			margin-top: 30px !important;
+		}
+
+			.mi-rs-modal-rate-details-legend > li {
+				margin-bottom: 20px;
+				padding: ;
+			}
+			.mi-rs-modal-rate-details-legend > li:last-child {
+				margin-bottom: 0;
+			}
+
+			.mi-rs-modal-details-legend-included {
+				color:#E6A225;
+				display: inline-block;
+				width: 25%;	
+			}
+
+			.mi-rs-modal-details-legend-restrictions {
+				color:#CF503F;
+				display: inline-block;
+				width: 25%;					
+			}
+
+			.mi-rs-modal-details-legend-payment {
+				color:#2190C0;
+				display: inline-block;
+				width: 25%;					
+			}
+
+			.mi-rs-modal-details-legend-cancel {
+				color:#492D29;
+				display: inline-block;
+				width: 25%;					
+			}
+
+			.mi-rs-modal-rate-details-legend ul {
+				display: inline-block;
+				width: 74%;
+				padding: 10px 0 10px 40px;
+				border-left: 2px solid #DEDEDE;;
+				box-sizing: border-box;
+				vertical-align: middle;
+			}
+
+		.mi-rs-modal-rate-details .mi-ico-star {
+			background-color: #E6A225;
+			color: #fff;
+			border-radius: 10px;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			font-size: 10px;
+			margin-right: 3px;
+			text-align: center;
+		}
+
+
+	.mi-rs-modal-room-details {
+		width: 500px;
+		margin:0 auto;
+	}
+
+		.mi-rs-modal-room-details .nav-pills {
+			margin: 20px 0 30px;
+		}
+
+			#mi-rs-modal-room-details-description {
+				
+			}
+
+				.mi-rs-modal-room-details-only-this-type {	
+					color: #72B17C;
+				}
+
+				#mi-rs-modal-room-details-description ul li {
+					margin-bottom: 5px;
+				}
+
+				.mi-rs-modal-room-details-only-this-type-legend {
+					margin-top: 20px;
+					font-size: .9em;
+					font-weight: normal;
+					color: #8D9194;
+				}
+
+					.mi-rs-modal-room-details-only-this-type-legend span {
+						background-color: #72B17C;
+						border-radius: 500px;
+						width: 6px;
+						height: 6px;
+						margin: 1px 3px 1px 0;
+						display: inline-block;
+					}
+
+			#mi-rs-modal-room-details-facilities {
+				
+			}
+
+				#mi-rs-modal-room-details-facilities p {
+					margin-bottom: 5px;
+				}
+
+				#mi-rs-modal-room-details-facilities p:first-child {
+					margin-bottom: 10px;
+				}
+
+				#mi-rs-modal-room-details-facilities p:last-child {
+					margin-top: 30px;
+				}
+
+				.mi-rs-modal-room-debs-distribution {
+					display: inline-block;
+					background-color: #F7F8FA;
+					width: 80px;
+					height: 80px;
+					text-align: center;
+					border-radius: 40px;
+					vertical-align: top;
+				}
+
+					.mi-rs-modal-room-debs-distribution .mi-ico-bed-single {
+						font-size: 20px;
+						vertical-align: top;
+						margin-top: 31px;
+					}
+					.mi-rs-modal-room-debs-distribution .mi-ico-bed-double {
+						font-size: 35px;
+						vertical-align: middle;
+						margin-top: 23px;
+					}
+
+
+	.mi-rs-modal-occupation-details {
+		width: 500px;
+		margin:0 auto;
+	}
+
+		.mi-rs-modal-occupation-btn {
+			border: 1px solid #DEDEDE !important;
+			border-radius: 3px;
+			width: 100%;
+			text-align: left;
+			padding: 15px 20px !important;
+			margin-bottom: 25px;
+		}
+		.mi-rs-modal-occupation-btn:hover,
+		.mi-rs-modal-occupation-btn.selected {
+			border: 1px solid #EE820F !important;
+			box-shadow: 0 0 2px #EE820F;
+		}
+		.mi-rs-modal-occupation-btn:hover .mi-rs-occupation-text-legend span:first-child,
+		.mi-rs-modal-occupation-btn.selected .mi-rs-occupation-text-legend span:first-child,
+		.mi-rs-modal-occupation-btn.people:hover,
+		.mi-rs-modal-occupation-btn.people.selected {
+			color: #EE820F;
+		}
+
+		.mi-rs-modal-occupation-btn.people {
+			width:47%;
+			margin-right: 5%;
+			padding: 20px !important;
+			text-align: center;
+		}
+
+		.mi-rs-modal-occupation-btn.people:nth-child(odd) {
+			margin-right: 0;
+		}
+
+			.mi-rs-modal-occupation-btn  div {
+				display: inline-block;
+			}
+
+			.mi-rs-modal-occupation-btn .mi-rs-occupation-icon-legend {
+				width: 20%;
+				vertical-align: middle;
+			}
+
+				.mi-rs-modal-occupation-btn  li {
+					height: 30px;
+				}
+
+					.mi-rs-modal-occupation-btn .mi-ico-people {
+						font-size: 28px;
+						width: 10px;
+						color: #2B5A9C;
+					}
+					.mi-rs-modal-occupation-btn .mi-ico-chidren:first-child {
+						margin: 2px 3px 0 2px;
+					}
+					.mi-rs-modal-occupation-btn .mi-ico-chidren.older {
+						font-size: 24px;
+						width: 6px;
+						color: #E8B835;
+					}
+					.mi-rs-modal-occupation-btn .mi-ico-chidren.younger {
+						font-size: 24px;
+						width: 6px;
+						color: #478C57;
+					}
+					.mi-rs-modal-occupation-btn .mi-ico-baby {
+						font-size: 20px;
+						color: #349CB7;
+						margin: 2px 0 0 4px;
+					}
+				.mi-rs-modal-occupation-btn .mi-rs-occupation-text-legend {
+					width: 75%;
+				}
+					.mi-rs-modal-occupation-btn .mi-rs-occupation-text-legend span:last-child {
+						font-style: italic;
+						color: #8D9194;
+						font-size: 0.85em;
+						margin-left: 5px;
+					}
